@@ -1,0 +1,115 @@
+{
+  "analysis": "Paired document-bootstrap comparison of distance-decayed versus binary TextRank co-occurrence edges on validation",
+  "source_sha256": "0beb3eee921f5fa7c5c0a83774264b322bb8e8e1ceb1fb8775233d320854c2c2",
+  "reference_sha256": "db99b125bc88b433add7a51e921b5c978fdc271026350973047cae390e7231bb",
+  "documents": 500,
+  "windows": [
+    2,
+    3,
+    5,
+    10
+  ],
+  "fractions": {
+    "one_third": 0.3333333333333333,
+    "selected_0_9": 0.9
+  },
+  "bootstrap": {
+    "unit": "paired documents across methods and windows",
+    "replicates": 10000,
+    "seed": 20261114,
+    "interval": "95% percentile interval",
+    "metric": "corpus micro F1"
+  },
+  "selection_caveat": "The distance-decay variant was identified by a prior multi-variant screening on this validation split; these unadjusted intervals are exploratory and not independent confirmation. The 0.90 fraction was also selected on this split.",
+  "comparison": "distance_decay minus binary_unweighted",
+  "results": {
+    "one_third": {
+      "by_window": {
+        "2": {
+          "point_difference": 0.012108223122525949,
+          "ci_95_percentile": [
+            0.007820686540702067,
+            0.01645662345869159
+          ],
+          "bootstrap_probability_positive": 1.0
+        },
+        "3": {
+          "point_difference": 0.01772283756621794,
+          "ci_95_percentile": [
+            0.011079575172215299,
+            0.024382532231522758
+          ],
+          "bootstrap_probability_positive": 1.0
+        },
+        "5": {
+          "point_difference": 0.013057028366902312,
+          "ci_95_percentile": [
+            0.00696909213061665,
+            0.01936988012329571
+          ],
+          "bootstrap_probability_positive": 1.0
+        },
+        "10": {
+          "point_difference": 0.01038923958216914,
+          "ci_95_percentile": [
+            0.0029565426955172245,
+            0.0179497949570146
+          ],
+          "bootstrap_probability_positive": 0.997
+        }
+      },
+      "mean_across_windows": {
+        "point_difference": 0.013319332159453835,
+        "ci_95_percentile": [
+          0.009813716703940602,
+          0.016862979995024386
+        ],
+        "bootstrap_probability_positive": 1.0
+      }
+    },
+    "selected_0_9": {
+      "by_window": {
+        "2": {
+          "point_difference": -0.00026775805887430115,
+          "ci_95_percentile": [
+            -0.001060981525492903,
+            0.0005209974287502289
+          ],
+          "bootstrap_probability_positive": 0.2633
+        },
+        "3": {
+          "point_difference": 0.008638073544271763,
+          "ci_95_percentile": [
+            0.00609259951694279,
+            0.011309951871802454
+          ],
+          "bootstrap_probability_positive": 1.0
+        },
+        "5": {
+          "point_difference": 0.022936110566329437,
+          "ci_95_percentile": [
+            0.019265896852594444,
+            0.026611572357249064
+          ],
+          "bootstrap_probability_positive": 1.0
+        },
+        "10": {
+          "point_difference": 0.02643146863553203,
+          "ci_95_percentile": [
+            0.022418417893319845,
+            0.030465805801639607
+          ],
+          "bootstrap_probability_positive": 1.0
+        }
+      },
+      "mean_across_windows": {
+        "point_difference": 0.014434473671814732,
+        "ci_95_percentile": [
+          0.01255942718641868,
+          0.016348547483533815
+        ],
+        "bootstrap_probability_positive": 1.0
+      }
+    }
+  }
+}

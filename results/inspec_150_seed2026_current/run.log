@@ -1,0 +1,34 @@
+2026-11-21 23:27:49,899 INFO Starting TextRank experiment.
+2026-11-21 23:27:49,900 INFO Loading configuration: C:\Users\ASUS\Downloads\G13 - Final Project\configs\experiment_150.json
+2026-11-21 23:27:49,901 INFO Loading dataset: C:\Users\ASUS\Downloads\G13 - Final Project\data\fixed_subset.jsonl
+2026-11-21 23:27:49,903 INFO Loaded 150 documents.
+2026-11-21 23:27:49,903 INFO Validated 150 documents; smoke-test limit: none.
+2026-11-21 23:27:49,904 INFO Evidence will be written to: C:\Users\ASUS\Downloads\G13 - Final Project\results\inspec_150_seed2026_current
+2026-11-21 23:27:49,904 INFO Preprocessing documents with the nltk POS tagger (NLTK English tagger).
+2026-11-21 23:27:59,391 INFO Preprocessing progress: 15/150 documents (10%).
+2026-11-21 23:27:59,503 INFO Preprocessing progress: 30/150 documents (20%).
+2026-11-21 23:27:59,576 INFO Preprocessing progress: 45/150 documents (30%).
+2026-11-21 23:27:59,686 INFO Preprocessing progress: 60/150 documents (40%).
+2026-11-21 23:27:59,732 INFO Preprocessing progress: 75/150 documents (50%).
+2026-11-21 23:27:59,774 INFO Preprocessing progress: 90/150 documents (60%).
+2026-11-21 23:27:59,903 INFO Preprocessing progress: 105/150 documents (70%).
+2026-11-21 23:27:59,968 INFO Preprocessing progress: 120/150 documents (80%).
+2026-11-21 23:28:00,095 INFO Preprocessing progress: 135/150 documents (90%).
+2026-11-21 23:28:00,170 INFO Preprocessing progress: 150/150 documents (100%).
+2026-11-21 23:28:00,170 INFO Preprocessing complete in 10.27 seconds.
+2026-11-21 23:28:00,173 INFO Ranking keywords for 150 documents using 7 methods: tfidf, textrank_w2, textrank_w3, textrank_w5, textrank_w10, textrank_w2_no_pos_filter, textrank_w2_no_single_char.
+2026-11-21 23:28:01,684 INFO Ranking progress: 15/150 documents (10%).
+2026-11-21 23:28:02,932 INFO Ranking progress: 30/150 documents (20%).
+2026-11-21 23:28:04,436 INFO Ranking progress: 45/150 documents (30%).
+2026-11-21 23:28:05,680 INFO Ranking progress: 60/150 documents (40%).
+2026-11-21 23:28:06,625 INFO Ranking progress: 75/150 documents (50%).
+2026-11-21 23:28:07,378 INFO Ranking progress: 90/150 documents (60%).
+2026-11-21 23:28:09,166 INFO Ranking progress: 105/150 documents (70%).
+2026-11-21 23:28:10,485 INFO Ranking progress: 120/150 documents (80%).
+2026-11-21 23:28:11,954 INFO Ranking progress: 135/150 documents (90%).
+2026-11-21 23:28:13,318 INFO Ranking progress: 150/150 documents (100%).
+2026-11-21 23:28:13,318 INFO Calculating evaluation metrics for 7 methods.
+2026-11-21 23:28:13,471 INFO Writing predictions.jsonl and metrics.csv.
+2026-11-21 23:28:13,499 INFO Writing 10 sampled cases to cases_10.jsonl.
+2026-11-21 23:28:13,521 INFO Writing run_metadata.json and finalizing evidence files.
+2026-11-21 23:28:13,523 INFO Experiment finished in 23.60 seconds. Evidence directory: C:\Users\ASUS\Downloads\G13 - Final Project\results\inspec_150_seed2026_current

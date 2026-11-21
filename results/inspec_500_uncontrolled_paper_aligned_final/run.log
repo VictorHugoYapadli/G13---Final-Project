@@ -1,0 +1,3 @@
+2026-11-07 21:52:46,179 INFO 开始运行 textrank_inspec_500_uncontrolled_paper_aligned，样本数=500，试跑限制=None
+2026-11-07 21:52:49,503 INFO 预处理完成，耗时 3.323757 秒
+2026-11-07 21:52:52,609 INFO 运行完成，总耗时 6.427271 秒；输出目录=D:\Beijing Institute of Technology\Sem 8\自然语言处理项目实践\final project\results\inspec_500_uncontrolled_paper_aligned_final

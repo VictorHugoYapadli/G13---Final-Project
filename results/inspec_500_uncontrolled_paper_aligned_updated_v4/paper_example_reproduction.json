@@ -1,0 +1,652 @@
+{
+  "analysis": "Worked-example intermediate TextRank reproduction; diagnostic only, not a score-tuning result",
+  "paper": "Mihalcea & Tarau (2004), Figure 2 discussion, TextRank keyword extraction",
+  "paper_example_source_document_id": "1939",
+  "test_input_sha256": "551f865d318be7d43cdb7271bc9c4adbb5748f7940877d81d5289010cf0f759e",
+  "paper_reported_high_scoring_words": {
+    "numbers": 1.46,
+    "inequations": 1.45,
+    "linear": 1.29,
+    "diophantine": 1.28,
+    "upper": 0.99,
+    "bounds": 0.99,
+    "strict": 0.77
+  },
+  "paper_window_for_this_illustrative_score_list": "Not stated in the surrounding text; window=2 comparison below is conditional, based on the Table 1 setting.",
+  "input_diagnostics": {
+    "project_token_count": 86,
+    "same_tokens_for_both_taggers": true,
+    "document_text_copied_to_report": false
+  },
+  "taggers_and_windows": {
+    "nltk_3.9.1": {
+      "eligible_unique_word_count": 26,
+      "windows": {
+        "2": {
+          "iterations": 57,
+          "converged": true,
+          "node_count": 26,
+          "unique_edge_count": 14,
+          "top_12": [
+            {
+              "word": "numbers",
+              "score": 1.4595030232802717
+            },
+            {
+              "word": "linear",
+              "score": 1.1791020756472
+            },
+            {
+              "word": "inequations",
+              "score": 1.1791020756472
+            },
+            {
+              "word": "diophantine",
+              "score": 1.1191435383878878
+            },
+            {
+              "word": "strict",
+              "score": 1.1191435383878878
+            },
+            {
+              "word": "equations",
+              "score": 1.1012988719858725
+            },
+            {
+              "word": "set",
+              "score": 1.0
+            },
+            {
+              "word": "upper",
+              "score": 1.0
+            },
+            {
+              "word": "bounds",
+              "score": 1.0
+            },
+            {
+              "word": "minimal",
+              "score": 1.0
+            },
+            {
+              "word": "algorithms",
+              "score": 1.0
+            },
+            {
+              "word": "types",
+              "score": 1.0
+            }
+          ],
+          "selected_phrases_top_fraction_1_3": [
+            "linear diophantine equations",
+            "strict inequations",
+            "numbers",
+            "linear",
+            "inequations",
+            "set",
+            "upper"
+          ],
+          "paper_score_comparison": {
+            "numbers": {
+              "paper": 1.46,
+              "implementation": 1.4595030232802717,
+              "absolute_difference": 0.0004969767197282593
+            },
+            "inequations": {
+              "paper": 1.45,
+              "implementation": 1.1791020756472,
+              "absolute_difference": 0.2708979243528
+            },
+            "linear": {
+              "paper": 1.29,
+              "implementation": 1.1791020756472,
+              "absolute_difference": 0.1108979243528001
+            },
+            "diophantine": {
+              "paper": 1.28,
+              "implementation": 1.1191435383878878,
+              "absolute_difference": 0.1608564616121122
+            },
+            "upper": {
+              "paper": 0.99,
+              "implementation": 1.0,
+              "absolute_difference": 0.010000000000000009
+            },
+            "bounds": {
+              "paper": 0.99,
+              "implementation": 1.0,
+              "absolute_difference": 0.010000000000000009
+            },
+            "strict": {
+              "paper": 0.77,
+              "implementation": 1.1191435383878878,
+              "absolute_difference": 0.3491435383878878
+            }
+          }
+        },
+        "3": {
+          "iterations": 57,
+          "converged": true,
+          "node_count": 26,
+          "unique_edge_count": 32,
+          "top_12": [
+            {
+              "word": "linear",
+              "score": 1.8632001787519012
+            },
+            {
+              "word": "systems",
+              "score": 1.4914476952217872
+            },
+            {
+              "word": "bounds",
+              "score": 1.4595030232802717
+            },
+            {
+              "word": "minimal",
+              "score": 1.447079188514674
+            },
+            {
+              "word": "set",
+              "score": 1.4129935344530744
+            },
+            {
+              "word": "equations",
+              "score": 1.4068710036922387
+            },
+            {
+              "word": "algorithms",
+              "score": 1.2413406104548725
+            },
+            {
+              "word": "inequations",
+              "score": 1.1633040321020425
+            },
+            {
+              "word": "solutions",
+              "score": 1.1328246029109272
+            },
+            {
+              "word": "criteria",
+              "score": 1.129486957586793
+            },
+            {
+              "word": "natural",
+              "score": 1.102842050002158
+            },
+            {
+              "word": "strict",
+              "score": 1.0824055031003916
+            }
+          ],
+          "selected_phrases_top_fraction_1_3": [
+            "minimal set",
+            "linear",
+            "systems",
+            "bounds",
+            "minimal",
+            "set",
+            "equations",
+            "algorithms",
+            "inequations"
+          ],
+          "paper_score_comparison": null
+        },
+        "5": {
+          "iterations": 16,
+          "converged": true,
+          "node_count": 26,
+          "unique_edge_count": 64,
+          "top_12": [
+            {
+              "word": "set",
+              "score": 1.8796939044708751
+            },
+            {
+              "word": "linear",
+              "score": 1.6622086469327524
+            },
+            {
+              "word": "solutions",
+              "score": 1.4092663453197907
+            },
+            {
+              "word": "minimal",
+              "score": 1.3877758887759022
+            },
+            {
+              "word": "criteria",
+              "score": 1.3781514498261394
+            },
+            {
+              "word": "inequations",
+              "score": 1.3506492395959007
+            },
+            {
+              "word": "systems",
+              "score": 1.2548152117226352
+            },
+            {
+              "word": "algorithms",
+              "score": 1.2049250528176603
+            },
+            {
+              "word": "compatibility",
+              "score": 1.1688902794214253
+            },
+            {
+              "word": "equations",
+              "score": 1.1463977645655832
+            },
+            {
+              "word": "strict",
+              "score": 0.9734086053700977
+            },
+            {
+              "word": "diophantine",
+              "score": 0.9687557820059106
+            }
+          ],
+          "selected_phrases_top_fraction_1_3": [
+            "minimal set",
+            "set",
+            "linear",
+            "solutions",
+            "minimal",
+            "criteria",
+            "inequations",
+            "systems",
+            "algorithms"
+          ],
+          "paper_score_comparison": null
+        },
+        "10": {
+          "iterations": 13,
+          "converged": true,
+          "node_count": 26,
+          "unique_edge_count": 128,
+          "top_12": [
+            {
+              "word": "set",
+              "score": 1.6244501298793708
+            },
+            {
+              "word": "criteria",
+              "score": 1.5332218134527764
+            },
+            {
+              "word": "systems",
+              "score": 1.4230987064563627
+            },
+            {
+              "word": "minimal",
+              "score": 1.3901755484513942
+            },
+            {
+              "word": "solutions",
+              "score": 1.3057515532562474
+            },
+            {
+              "word": "linear",
+              "score": 1.2494460772231895
+            },
+            {
+              "word": "compatibility",
+              "score": 1.162773233822671
+            },
+            {
+              "word": "inequations",
+              "score": 1.0800110912109568
+            },
+            {
+              "word": "system",
+              "score": 1.0724940421032247
+            },
+            {
+              "word": "algorithms",
+              "score": 1.0349807776332358
+            },
+            {
+              "word": "upper",
+              "score": 0.9982948504633142
+            },
+            {
+              "word": "equations",
+              "score": 0.9883649498018123
+            }
+          ],
+          "selected_phrases_top_fraction_1_3": [
+            "minimal set",
+            "set",
+            "criteria",
+            "systems",
+            "minimal",
+            "solutions",
+            "linear",
+            "compatibility",
+            "inequations"
+          ],
+          "paper_score_comparison": null
+        }
+      }
+    },
+    "spacy_3.8.18_en_core_web_sm_3.8.0": {
+      "eligible_unique_word_count": 25,
+      "windows": {
+        "2": {
+          "iterations": 57,
+          "converged": true,
+          "node_count": 25,
+          "unique_edge_count": 13,
+          "top_12": [
+            {
+              "word": "numbers",
+              "score": 1.4595030232802717
+            },
+            {
+              "word": "minimal",
+              "score": 1.2982456140350873
+            },
+            {
+              "word": "generating",
+              "score": 1.2982456140350873
+            },
+            {
+              "word": "linear",
+              "score": 1.1791020756472
+            },
+            {
+              "word": "inequations",
+              "score": 1.1791020756472
+            },
+            {
+              "word": "diophantine",
+              "score": 1.1191435383878878
+            },
+            {
+              "word": "strict",
+              "score": 1.1191435383878878
+            },
+            {
+              "word": "equations",
+              "score": 1.1012988719858725
+            },
+            {
+              "word": "upper",
+              "score": 1.0
+            },
+            {
+              "word": "bounds",
+              "score": 1.0
+            },
+            {
+              "word": "types",
+              "score": 1.0
+            },
+            {
+              "word": "mixed",
+              "score": 1.0
+            }
+          ],
+          "selected_phrases_top_fraction_1_3": [
+            "linear diophantine equations",
+            "minimal generating",
+            "strict inequations",
+            "numbers",
+            "minimal",
+            "linear",
+            "inequations"
+          ],
+          "paper_score_comparison": {
+            "numbers": {
+              "paper": 1.46,
+              "implementation": 1.4595030232802717,
+              "absolute_difference": 0.0004969767197282593
+            },
+            "inequations": {
+              "paper": 1.45,
+              "implementation": 1.1791020756472,
+              "absolute_difference": 0.2708979243528
+            },
+            "linear": {
+              "paper": 1.29,
+              "implementation": 1.1791020756472,
+              "absolute_difference": 0.1108979243528001
+            },
+            "diophantine": {
+              "paper": 1.28,
+              "implementation": 1.1191435383878878,
+              "absolute_difference": 0.1608564616121122
+            },
+            "upper": {
+              "paper": 0.99,
+              "implementation": 1.0,
+              "absolute_difference": 0.010000000000000009
+            },
+            "bounds": {
+              "paper": 0.99,
+              "implementation": 1.0,
+              "absolute_difference": 0.010000000000000009
+            },
+            "strict": {
+              "paper": 0.77,
+              "implementation": 1.1191435383878878,
+              "absolute_difference": 0.3491435383878878
+            }
+          }
+        },
+        "3": {
+          "iterations": 57,
+          "converged": true,
+          "node_count": 25,
+          "unique_edge_count": 31,
+          "top_12": [
+            {
+              "word": "linear",
+              "score": 1.8636521961787662
+            },
+            {
+              "word": "systems",
+              "score": 1.4926027306314067
+            },
+            {
+              "word": "bounds",
+              "score": 1.4595030232802717
+            },
+            {
+              "word": "minimal",
+              "score": 1.426121992105534
+            },
+            {
+              "word": "equations",
+              "score": 1.4070401315234755
+            },
+            {
+              "word": "inequations",
+              "score": 1.1633886803847782
+            },
+            {
+              "word": "criteria",
+              "score": 1.1345612662280136
+            },
+            {
+              "word": "natural",
+              "score": 1.1121248623622169
+            },
+            {
+              "word": "solutions",
+              "score": 1.105337637839079
+            },
+            {
+              "word": "sets",
+              "score": 1.0900349220864411
+            },
+            {
+              "word": "strict",
+              "score": 1.0825054158326584
+            },
+            {
+              "word": "set",
+              "score": 1.0813319568972308
+            }
+          ],
+          "selected_phrases_top_fraction_1_3": [
+            "linear",
+            "systems",
+            "bounds",
+            "minimal",
+            "equations",
+            "inequations",
+            "criteria",
+            "natural"
+          ],
+          "paper_score_comparison": null
+        },
+        "5": {
+          "iterations": 13,
+          "converged": true,
+          "node_count": 25,
+          "unique_edge_count": 63,
+          "top_12": [
+            {
+              "word": "set",
+              "score": 1.6582726774076613
+            },
+            {
+              "word": "linear",
+              "score": 1.649147016508432
+            },
+            {
+              "word": "solutions",
+              "score": 1.3472586745430317
+            },
+            {
+              "word": "inequations",
+              "score": 1.3438936145694993
+            },
+            {
+              "word": "minimal",
+              "score": 1.3262836241485276
+            },
+            {
+              "word": "systems",
+              "score": 1.2398569845940384
+            },
+            {
+              "word": "compatibility",
+              "score": 1.1552528098351864
+            },
+            {
+              "word": "criteria",
+              "score": 1.1512485901858613
+            },
+            {
+              "word": "equations",
+              "score": 1.141157740794257
+            },
+            {
+              "word": "construction",
+              "score": 0.9846464032077051
+            },
+            {
+              "word": "strict",
+              "score": 0.9691374466530593
+            },
+            {
+              "word": "diophantine",
+              "score": 0.9642693225603786
+            }
+          ],
+          "selected_phrases_top_fraction_1_3": [
+            "minimal set",
+            "set",
+            "linear",
+            "solutions",
+            "inequations",
+            "minimal",
+            "systems",
+            "compatibility",
+            "criteria"
+          ],
+          "paper_score_comparison": null
+        },
+        "10": {
+          "iterations": 13,
+          "converged": true,
+          "node_count": 25,
+          "unique_edge_count": 123,
+          "top_12": [
+            {
+              "word": "set",
+              "score": 1.5331664064954227
+            },
+            {
+              "word": "systems",
+              "score": 1.4242221825251504
+            },
+            {
+              "word": "criteria",
+              "score": 1.3523166992412516
+            },
+            {
+              "word": "minimal",
+              "score": 1.2944823021948797
+            },
+            {
+              "word": "linear",
+              "score": 1.2522171862485267
+            },
+            {
+              "word": "solutions",
+              "score": 1.2098165982671252
+            },
+            {
+              "word": "compatibility",
+              "score": 1.165386625103666
+            },
+            {
+              "word": "inequations",
+              "score": 1.0820557637737869
+            },
+            {
+              "word": "system",
+              "score": 1.0749780643889073
+            },
+            {
+              "word": "upper",
+              "score": 1.00031474182728
+            },
+            {
+              "word": "equations",
+              "score": 0.9905702443584756
+            },
+            {
+              "word": "diophantine",
+              "score": 0.9900353507904119
+            }
+          ],
+          "selected_phrases_top_fraction_1_3": [
+            "minimal set",
+            "set",
+            "systems",
+            "criteria",
+            "minimal",
+            "linear",
+            "solutions",
+            "compatibility",
+            "inequations"
+          ],
+          "paper_score_comparison": null
+        }
+      }
+    }
+  },
+  "window_2_nltk_score_comparison": {
+    "mean_absolute_difference": 0.13032754648933262,
+    "score_within_0_02_of_paper_count": 3,
+    "score_count": 7,
+    "top_7_overlap_with_paper_reported_words": 5
+  },
+  "interpretation": "The current NLTK/window-2 implementation reproduces the reported numbers score to two decimals and is close for upper/bounds, but differs materially for inequations, linear, diophantine, and strict. SpaCy changes tag eligibility and adds other high-ranked terms. Since the paper does not specify the window for this illustrative score list or the tagger/model details, this is a partial intermediate check, not proof of an implementation bug.",
+  "test_set_used_for_tuning": false
+}

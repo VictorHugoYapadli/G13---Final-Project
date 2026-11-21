@@ -1,0 +1,16 @@
+2026-11-21 23:36:27,769 INFO Starting TextRank experiment.
+2026-11-21 23:36:27,770 INFO Loading configuration: C:\Users\ASUS\Downloads\G13 - Final Project\configs\experiment_paper_aligned.json
+2026-11-21 23:36:27,771 INFO Loading dataset: C:\Users\ASUS\Downloads\G13 - Final Project\data\inspec_paper_test.jsonl
+2026-11-21 23:36:27,788 INFO Loaded 500 documents.
+2026-11-21 23:36:27,788 INFO Validated 500 documents; smoke-test limit: none.
+2026-11-21 23:36:27,789 INFO Evidence will be written to: C:\Users\ASUS\Downloads\G13 - Final Project\results\textrank_20261121_233627
+2026-11-21 23:36:27,789 INFO Preprocessing documents with the nltk POS tagger (NLTK English tagger).
+2026-11-21 23:36:32,136 INFO Preprocessing progress: 50/500 documents (10%).
+2026-11-21 23:36:32,797 INFO Preprocessing progress: 100/500 documents (20%).
+2026-11-21 23:36:33,423 INFO Preprocessing progress: 150/500 documents (30%).
+2026-11-21 23:36:34,018 INFO Preprocessing progress: 200/500 documents (40%).
+2026-11-21 23:36:34,575 INFO Preprocessing progress: 250/500 documents (50%).
+2026-11-21 23:36:35,013 INFO Preprocessing progress: 300/500 documents (60%).
+2026-11-21 23:36:35,697 INFO Preprocessing progress: 350/500 documents (70%).
+2026-11-21 23:36:36,305 INFO Preprocessing progress: 400/500 documents (80%).
+2026-11-21 23:36:36,975 INFO Preprocessing progress: 450/500 documents (90%).

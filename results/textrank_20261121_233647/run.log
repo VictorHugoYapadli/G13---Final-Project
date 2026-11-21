@@ -1,0 +1,19 @@
+2026-11-21 23:36:47,097 INFO Starting TextRank experiment.
+2026-11-21 23:36:47,098 INFO Loading configuration: C:\Users\ASUS\Downloads\G13 - Final Project\configs\experiment_paper_aligned.json
+2026-11-21 23:36:47,101 INFO Loading dataset: C:\Users\ASUS\Downloads\G13 - Final Project\data\inspec_paper_test.jsonl
+2026-11-21 23:36:47,126 INFO Loaded 500 documents.
+2026-11-21 23:36:47,126 INFO Validated 500 documents; smoke-test limit: none.
+2026-11-21 23:36:47,127 INFO Evidence will be written to: C:\Users\ASUS\Downloads\G13 - Final Project\results\textrank_20261121_233647
+2026-11-21 23:36:47,127 INFO Preprocessing documents with the nltk POS tagger (NLTK English tagger).
+2026-11-21 23:36:50,834 INFO Preprocessing progress: 50/500 documents (10%).
+2026-11-21 23:36:51,629 INFO Preprocessing progress: 100/500 documents (20%).
+2026-11-21 23:36:52,260 INFO Preprocessing progress: 150/500 documents (30%).
+2026-11-21 23:36:52,871 INFO Preprocessing progress: 200/500 documents (40%).
+2026-11-21 23:36:53,381 INFO Preprocessing progress: 250/500 documents (50%).
+2026-11-21 23:36:53,801 INFO Preprocessing progress: 300/500 documents (60%).
+2026-11-21 23:36:54,491 INFO Preprocessing progress: 350/500 documents (70%).
+2026-11-21 23:36:55,163 INFO Preprocessing progress: 400/500 documents (80%).
+2026-11-21 23:36:55,813 INFO Preprocessing progress: 450/500 documents (90%).
+2026-11-21 23:36:56,485 INFO Preprocessing progress: 500/500 documents (100%).
+2026-11-21 23:36:56,485 INFO Preprocessing complete in 9.36 seconds.
+2026-11-21 23:36:56,503 INFO Ranking keywords for 500 documents using 7 methods: tfidf, textrank_w2, textrank_w3, textrank_w5, textrank_w10, textrank_w2_no_pos_filter, textrank_w2_no_single_char.

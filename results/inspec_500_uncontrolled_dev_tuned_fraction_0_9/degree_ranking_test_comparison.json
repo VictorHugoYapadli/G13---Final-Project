@@ -1,0 +1,202 @@
+{
+  "analysis": "One-time test evaluation of graph degree selected based on validation ranking comparison; same graph, POS tags, phrase merge, and cutoffs as TextRank",
+  "dataset": "Inspec test split (500 documents; original uncontrolled labels)",
+  "data_sha256": "551f865d318be7d43cdb7271bc9c4adbb5748f7940877d81d5289010cf0f759e",
+  "source_sha256": "61cdc164c41e27da57264626071e46a01a5c26041b37a1e11b9af0fe4691fb6c",
+  "reference_sha256": "303091e245fcd7deb21f71e6679840cfef23d3e1cf72f4898a8dbc754c8a0d9b",
+  "config_sha256": "c742c30b20f88ea98fb1573555ac92eba6e9e211f2be9c27160489bc0c784660",
+  "documents": 500,
+  "references_total": 4893,
+  "token_count": 60915,
+  "tagger": {
+    "spacy": "3.8.18",
+    "model": "en_core_web_sm 3.8.0"
+  },
+  "ranking_methods": {
+    "degree": "Unweighted unique-neighbor degree on the same co-occurrence graph and window.",
+    "textrank": "Existing iterative TextRank formula; included as paired control."
+  },
+  "fractions": [
+    0.3333333333333333,
+    0.9
+  ],
+  "windows": [
+    2,
+    3,
+    5,
+    10
+  ],
+  "results": {
+    "degree": {
+      "0.3333333333333333": {
+        "windows": {
+          "2": {
+            "assigned_total": 5846,
+            "assigned_mean": 11.692,
+            "correct_total": 977,
+            "references_total": 4893,
+            "precision_micro": 0.1671228190215532,
+            "recall_micro": 0.19967300224810955,
+            "f1_micro": 0.18195362696712913
+          },
+          "3": {
+            "assigned_total": 5946,
+            "assigned_mean": 11.892,
+            "correct_total": 942,
+            "references_total": 4893,
+            "precision_micro": 0.1584258324924319,
+            "recall_micro": 0.19251992642550583,
+            "f1_micro": 0.17381677276501523
+          },
+          "5": {
+            "assigned_total": 6146,
+            "assigned_mean": 12.292,
+            "correct_total": 1017,
+            "references_total": 4893,
+            "precision_micro": 0.16547347868532378,
+            "recall_micro": 0.20784794604537093,
+            "f1_micro": 0.18425582027357548
+          },
+          "10": {
+            "assigned_total": 6251,
+            "assigned_mean": 12.502,
+            "correct_total": 997,
+            "references_total": 4893,
+            "precision_micro": 0.1594944808830587,
+            "recall_micro": 0.20376047414674023,
+            "f1_micro": 0.17893036611629576
+          }
+        },
+        "mean_f1_across_windows": 0.1797391465305039
+      },
+      "0.9": {
+        "windows": {
+          "2": {
+            "assigned_total": 12631,
+            "assigned_mean": 25.262,
+            "correct_total": 2790,
+            "references_total": 4893,
+            "precision_micro": 0.22088512390151216,
+            "recall_micro": 0.5702023298589822,
+            "f1_micro": 0.31842045195160923
+          },
+          "3": {
+            "assigned_total": 12946,
+            "assigned_mean": 25.892,
+            "correct_total": 2720,
+            "references_total": 4893,
+            "precision_micro": 0.21010350687471033,
+            "recall_micro": 0.5558961782137748,
+            "f1_micro": 0.3049498290262907
+          },
+          "5": {
+            "assigned_total": 13321,
+            "assigned_mean": 26.642,
+            "correct_total": 2626,
+            "references_total": 4893,
+            "precision_micro": 0.19713234742136476,
+            "recall_micro": 0.5366850602902105,
+            "f1_micro": 0.28834962117052815
+          },
+          "10": {
+            "assigned_total": 13418,
+            "assigned_mean": 26.836,
+            "correct_total": 2596,
+            "references_total": 4893,
+            "precision_micro": 0.19347145625279474,
+            "recall_micro": 0.5305538524422645,
+            "f1_micro": 0.2835454098629239
+          }
+        },
+        "mean_f1_across_windows": 0.29881632800283797
+      }
+    },
+    "textrank": {
+      "0.3333333333333333": {
+        "windows": {
+          "2": {
+            "assigned_total": 5806,
+            "assigned_mean": 11.612,
+            "correct_total": 749,
+            "references_total": 4893,
+            "precision_micro": 0.12900447812607646,
+            "recall_micro": 0.1530758226037196,
+            "f1_micro": 0.14001308533507806
+          },
+          "3": {
+            "assigned_total": 6378,
+            "assigned_mean": 12.756,
+            "correct_total": 686,
+            "references_total": 4893,
+            "precision_micro": 0.10755722797115083,
+            "recall_micro": 0.1402002861230329,
+            "f1_micro": 0.12172832934078609
+          },
+          "5": {
+            "assigned_total": 6460,
+            "assigned_mean": 12.92,
+            "correct_total": 880,
+            "references_total": 4893,
+            "precision_micro": 0.13622291021671826,
+            "recall_micro": 0.17984876353975066,
+            "f1_micro": 0.15502510349687307
+          },
+          "10": {
+            "assigned_total": 6381,
+            "assigned_mean": 12.762,
+            "correct_total": 970,
+            "references_total": 4893,
+            "precision_micro": 0.15201379094185866,
+            "recall_micro": 0.1982423870835888,
+            "f1_micro": 0.1720773461060848
+          }
+        },
+        "mean_f1_across_windows": 0.14721096606970552
+      },
+      "0.9": {
+        "windows": {
+          "2": {
+            "assigned_total": 12627,
+            "assigned_mean": 25.254,
+            "correct_total": 2787,
+            "references_total": 4893,
+            "precision_micro": 0.2207175100974103,
+            "recall_micro": 0.5695892090741876,
+            "f1_micro": 0.31815068493150683
+          },
+          "3": {
+            "assigned_total": 12867,
+            "assigned_mean": 25.734,
+            "correct_total": 2691,
+            "references_total": 4893,
+            "precision_micro": 0.20913965959431102,
+            "recall_micro": 0.5499693439607602,
+            "f1_micro": 0.3030405405405405
+          },
+          "5": {
+            "assigned_total": 13309,
+            "assigned_mean": 26.618,
+            "correct_total": 2593,
+            "references_total": 4893,
+            "precision_micro": 0.19483056578255317,
+            "recall_micro": 0.5299407316574699,
+            "f1_micro": 0.28491374574222617
+          },
+          "10": {
+            "assigned_total": 13461,
+            "assigned_mean": 26.922,
+            "correct_total": 2546,
+            "references_total": 4893,
+            "precision_micro": 0.1891389941311938,
+            "recall_micro": 0.5203351726956877,
+            "f1_micro": 0.2774327122153209
+          }
+        },
+        "mean_f1_across_windows": 0.29588442085739863
+      }
+    }
+  },
+  "textrank_control_matches_saved_spacy_test_comparison": true,
+  "selection": "Degree was selected for this comparison from validation-only results among graph-based rankings. Test scores were not used to select the method or cutoffs.",
+  "interpretation": "Exploratory test evidence only: the test split had been examined in earlier runs."
+}

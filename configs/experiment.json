@@ -1,0 +1,32 @@
+{
+  "experiment_name": "textrank_keyword_fixed_subset",
+  "paper": {
+    "title": "TextRank: Bringing Order into Texts",
+    "url": "https://aclanthology.org/W04-3252/",
+    "target": "Section 3, Table 1: unsupervised keyword extraction"
+  },
+  "dataset": {
+    "expected_min_documents": 100,
+    "expected_max_documents": 200
+  },
+  "preprocessing": {
+    "pos_tags": ["NN", "NNS", "NNP", "NNPS", "JJ", "JJR", "JJS"],
+    "stemming": "Porter",
+    "candidate_strategy": "all_contiguous_pos_subphrases"
+  },
+  "textrank": {
+    "windows": [2, 4, 8],
+    "top_word_fraction": 0.3333333333333333,
+    "damping": 0.85,
+    "tolerance": 0.0001,
+    "max_iterations": 100
+  },
+  "evaluation": {
+    "cutoffs": [5, 10],
+    "aggregation": "document_macro",
+    "case_count": 10,
+    "case_seed": 2026,
+    "include_text_in_cases": false,
+    "text_excerpt_characters": 500
+  }
+}

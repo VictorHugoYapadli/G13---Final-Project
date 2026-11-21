@@ -1,0 +1,318 @@
+{
+  "analysis": "Validation-only POS tagger comparison; pretokenized identical tokens, fixed candidate/ranking/evaluation rules",
+  "dataset": "Inspec validation split (MIDAS valid.jsonl; AKE dev.uncontr.json)",
+  "dataset_revision": "9617780e99705df88a4cb239174c86b9d8d8300f",
+  "reference_commit": "0395f120f8505405dc6f8fc04eefffabfd920918",
+  "source_url": "https://huggingface.co/datasets/midas/inspec/resolve/9617780e99705df88a4cb239174c86b9d8d8300f/valid.jsonl",
+  "reference_url": "https://raw.githubusercontent.com/boudinfl/ake-datasets/0395f120f8505405dc6f8fc04eefffabfd920918/datasets/Inspec/references/dev.uncontr.json",
+  "source_sha256": "0beb3eee921f5fa7c5c0a83774264b322bb8e8e1ceb1fb8775233d320854c2c2",
+  "reference_sha256": "db99b125bc88b433add7a51e921b5c978fdc271026350973047cae390e7231bb",
+  "document_count": 500,
+  "label_validation": {
+    "documents_checked": 500,
+    "mismatched_documents": 0
+  },
+  "tokenization_control": {
+    "project_tokenizer": "textrank_repro.text.tokenize (via NLTK tag_text)",
+    "same_token_sequence_for_both_taggers": true,
+    "token_count": 59640,
+    "exact_tag_agreement_rate": 0.9012910798122066
+  },
+  "models": {
+    "nltk_averaged_perceptron_eng": {
+      "nltk_version": "3.9.1",
+      "resource_fingerprint": {
+        "resource": "averaged_perceptron_tagger_eng",
+        "files_sha256": {
+          "averaged_perceptron_tagger_eng.classes.json": "d152ffa69d45b8357276341a3d592c6c025911d52ec0d9068d4f382560dd48b6",
+          "averaged_perceptron_tagger_eng.tagdict.json": "4c713731cb06727736962bc8cd94ad919217a040e76691059af99bc0c2c9c246",
+          "averaged_perceptron_tagger_eng.weights.json": "789e8e35f6fac656d9b7eccea29ba4e8a137cbb5b525dd31f39e4291a9e80832"
+        }
+      }
+    },
+    "spacy_en_core_web_sm_3_8_0": {
+      "spacy_version": "3.8.18",
+      "model_version": "3.8.0",
+      "pipeline": [
+        "tok2vec",
+        "tagger"
+      ],
+      "model_package": "en_core_web_sm"
+    }
+  },
+  "windows": [
+    2,
+    3,
+    5,
+    10
+  ],
+  "fractions": [
+    0.3333333333333333,
+    0.9
+  ],
+  "results": {
+    "nltk_averaged_perceptron_eng": {
+      "documents": 500,
+      "token_count": 59640,
+      "eligible_token_count": 28001,
+      "eligible_token_rate": 0.46950033534540575,
+      "candidate_references": 3024,
+      "reference_count": 4566,
+      "candidate_coverage_micro": 0.6622864651773982,
+      "tag_distribution": {
+        "NN": 14880,
+        "IN": 7769,
+        "JJ": 7690,
+        "NNS": 5148,
+        "VBD": 641,
+        "VBN": 2185,
+        "DT": 7166,
+        "PRP$": 253,
+        "TO": 1352,
+        "VB": 1480,
+        "VBP": 1425,
+        "VBG": 1527,
+        "CC": 2100,
+        "RB": 1394,
+        "MD": 376,
+        "JJR": 155,
+        "WRB": 199,
+        "VBZ": 1979,
+        "PDT": 28,
+        "RBR": 88,
+        "CD": 295,
+        "WDT": 393,
+        "EX": 48,
+        "PRP": 777,
+        "WP": 40,
+        "RBS": 37,
+        "JJS": 92,
+        "RP": 62,
+        "FW": 18,
+        "WP$": 7,
+        "NNP": 36
+      },
+      "fraction_results": {
+        "0.3333333333333333": {
+          "windows": {
+            "2": {
+              "assigned_total": 5770,
+              "assigned_mean": 11.54,
+              "correct_total": 613,
+              "references_total": 4566,
+              "precision_micro": 0.10623916811091855,
+              "recall_micro": 0.13425317564607972,
+              "f1_micro": 0.11861455108359133
+            },
+            "3": {
+              "assigned_total": 6255,
+              "assigned_mean": 12.51,
+              "correct_total": 657,
+              "references_total": 4566,
+              "precision_micro": 0.10503597122302158,
+              "recall_micro": 0.14388961892247043,
+              "f1_micro": 0.12143055170501803
+            },
+            "5": {
+              "assigned_total": 6314,
+              "assigned_mean": 12.628,
+              "correct_total": 849,
+              "references_total": 4566,
+              "precision_micro": 0.13446309787773203,
+              "recall_micro": 0.1859395532194481,
+              "f1_micro": 0.15606617647058824
+            },
+            "10": {
+              "assigned_total": 6252,
+              "assigned_mean": 12.504,
+              "correct_total": 894,
+              "references_total": 4566,
+              "precision_micro": 0.14299424184261036,
+              "recall_micro": 0.19579500657030224,
+              "f1_micro": 0.16528008874098726
+            }
+          },
+          "mean_f1_across_windows": 0.1403478420000462
+        },
+        "0.9": {
+          "windows": {
+            "2": {
+              "assigned_total": 12317,
+              "assigned_mean": 24.634,
+              "correct_total": 2500,
+              "references_total": 4566,
+              "precision_micro": 0.20297150280100673,
+              "recall_micro": 0.5475251861585633,
+              "f1_micro": 0.2961558964638986
+            },
+            "3": {
+              "assigned_total": 12530,
+              "assigned_mean": 25.06,
+              "correct_total": 2429,
+              "references_total": 4566,
+              "precision_micro": 0.19385474860335195,
+              "recall_micro": 0.5319754708716601,
+              "f1_micro": 0.28416003743565743
+            },
+            "5": {
+              "assigned_total": 13002,
+              "assigned_mean": 26.004,
+              "correct_total": 2334,
+              "references_total": 4566,
+              "precision_micro": 0.17951084448546378,
+              "recall_micro": 0.5111695137976346,
+              "f1_micro": 0.2657103825136612
+            },
+            "10": {
+              "assigned_total": 13133,
+              "assigned_mean": 26.266,
+              "correct_total": 2315,
+              "references_total": 4566,
+              "precision_micro": 0.17627350947993603,
+              "recall_micro": 0.5070083223828296,
+              "f1_micro": 0.2615967003785525
+            }
+          },
+          "mean_f1_across_windows": 0.27690575419794244
+        }
+      }
+    },
+    "spacy_en_core_web_sm_3_8_0": {
+      "documents": 500,
+      "token_count": 59640,
+      "eligible_token_count": 27745,
+      "eligible_token_rate": 0.46520791415157614,
+      "candidate_references": 3051,
+      "reference_count": 4566,
+      "candidate_coverage_micro": 0.6681997371879106,
+      "tag_distribution": {
+        "NN": 14231,
+        "IN": 8219,
+        "NNP": 1426,
+        "NNS": 5135,
+        "JJ": 6704,
+        "VBD": 515,
+        "VBN": 2413,
+        "DT": 7127,
+        "PRP$": 255,
+        "TO": 834,
+        "VB": 1468,
+        "VBG": 1431,
+        "CC": 2137,
+        "RB": 1449,
+        "VBP": 1331,
+        "MD": 374,
+        "JJR": 163,
+        "WRB": 202,
+        "POS": 108,
+        "VBZ": 2019,
+        "PDT": 37,
+        "RBR": 97,
+        "CD": 307,
+        "WDT": 425,
+        "EX": 50,
+        "PRP": 843,
+        "WP": 39,
+        "RBS": 50,
+        "UH": 23,
+        "XX": 12,
+        "JJS": 81,
+        ",": 3,
+        "RP": 72,
+        "NNPS": 5,
+        "FW": 24,
+        "WP$": 7,
+        "SYM": 3,
+        "LS": 8,
+        "HYPH": 3,
+        "NFP": 7,
+        ":": 3
+      },
+      "fraction_results": {
+        "0.3333333333333333": {
+          "windows": {
+            "2": {
+              "assigned_total": 5676,
+              "assigned_mean": 11.352,
+              "correct_total": 632,
+              "references_total": 4566,
+              "precision_micro": 0.1113460183227625,
+              "recall_micro": 0.1384143670608848,
+              "f1_micro": 0.12341339582112869
+            },
+            "3": {
+              "assigned_total": 6162,
+              "assigned_mean": 12.324,
+              "correct_total": 679,
+              "references_total": 4566,
+              "precision_micro": 0.11019149626744563,
+              "recall_micro": 0.1487078405606658,
+              "f1_micro": 0.1265846383296048
+            },
+            "5": {
+              "assigned_total": 6226,
+              "assigned_mean": 12.452,
+              "correct_total": 841,
+              "references_total": 4566,
+              "precision_micro": 0.13507870221651141,
+              "recall_micro": 0.1841874726237407,
+              "f1_micro": 0.15585618977020016
+            },
+            "10": {
+              "assigned_total": 6147,
+              "assigned_mean": 12.294,
+              "correct_total": 902,
+              "references_total": 4566,
+              "precision_micro": 0.14673824629900764,
+              "recall_micro": 0.19754708716600963,
+              "f1_micro": 0.16839354055820033
+            }
+          },
+          "mean_f1_across_windows": 0.1435619411197835
+        },
+        "0.9": {
+          "windows": {
+            "2": {
+              "assigned_total": 12175,
+              "assigned_mean": 24.35,
+              "correct_total": 2527,
+              "references_total": 4566,
+              "precision_micro": 0.2075564681724846,
+              "recall_micro": 0.5534384581690758,
+              "f1_micro": 0.30189355474583357
+            },
+            "3": {
+              "assigned_total": 12380,
+              "assigned_mean": 24.76,
+              "correct_total": 2478,
+              "references_total": 4566,
+              "precision_micro": 0.20016155088852988,
+              "recall_micro": 0.5427069645203679,
+              "f1_micro": 0.2924583972618907
+            },
+            "5": {
+              "assigned_total": 12821,
+              "assigned_mean": 25.642,
+              "correct_total": 2368,
+              "references_total": 4566,
+              "precision_micro": 0.18469698151470243,
+              "recall_micro": 0.5186158563293911,
+              "f1_micro": 0.2723874158854316
+            },
+            "10": {
+              "assigned_total": 12959,
+              "assigned_mean": 25.918,
+              "correct_total": 2371,
+              "references_total": 4566,
+              "precision_micro": 0.18296164827532987,
+              "recall_micro": 0.5192728865527815,
+              "f1_micro": 0.2705848787446505
+            }
+          },
+          "mean_f1_across_windows": 0.2843310616594516
+        }
+      }
+    }
+  },
+  "selection_or_test_set_use": "No parameter or model was selected using the Inspec test-set metrics; comparison is on validation only."
+}

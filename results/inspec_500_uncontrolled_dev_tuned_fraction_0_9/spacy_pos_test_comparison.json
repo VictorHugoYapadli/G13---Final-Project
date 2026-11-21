@@ -1,0 +1,195 @@
+{
+  "analysis": "One-time test evaluation of spaCy POS tagger after validation comparison; all non-tagger settings held fixed",
+  "dataset": "Inspec test split (500 documents; original uncontrolled labels)",
+  "data_sha256": "551f865d318be7d43cdb7271bc9c4adbb5748f7940877d81d5289010cf0f759e",
+  "source_sha256": "61cdc164c41e27da57264626071e46a01a5c26041b37a1e11b9af0fe4691fb6c",
+  "reference_sha256": "303091e245fcd7deb21f71e6679840cfef23d3e1cf72f4898a8dbc754c8a0d9b",
+  "config_sha256": "c742c30b20f88ea98fb1573555ac92eba6e9e211f2be9c27160489bc0c784660",
+  "documents": 500,
+  "label_validation": "All IDs/order and normalized label sets match across generated data, MIDAS source, and AKE references.",
+  "tokenization_control": {
+    "same_project_token_sequence": true,
+    "token_count": 60915,
+    "exact_tag_agreement_rate": 0.9063284905195764
+  },
+  "models": {
+    "nltk": {
+      "package_version": "3.9.1",
+      "result_reproduced_saved_metrics": true
+    },
+    "spacy": {
+      "package_version": "3.8.18",
+      "model": "en_core_web_sm",
+      "model_version": "3.8.0"
+    }
+  },
+  "fractions": [
+    0.3333333333333333,
+    0.9
+  ],
+  "windows": [
+    2,
+    3,
+    5,
+    10
+  ],
+  "results": {
+    "nltk_averaged_perceptron_eng": {
+      "0.3333333333333333": {
+        "2": {
+          "assigned_total": 5876,
+          "assigned_mean": 11.752,
+          "correct_total": 741,
+          "references_total": 4893,
+          "precision_micro": 0.1261061946902655,
+          "recall_micro": 0.15144083384426732,
+          "f1_micro": 0.13761723465502831
+        },
+        "3": {
+          "assigned_total": 6439,
+          "assigned_mean": 12.878,
+          "correct_total": 671,
+          "references_total": 4893,
+          "precision_micro": 0.10420872806336387,
+          "recall_micro": 0.1371346821990599,
+          "f1_micro": 0.1184256971408401
+        },
+        "5": {
+          "assigned_total": 6495,
+          "assigned_mean": 12.99,
+          "correct_total": 861,
+          "references_total": 4893,
+          "precision_micro": 0.1325635103926097,
+          "recall_micro": 0.1759656652360515,
+          "f1_micro": 0.1512118018967334
+        },
+        "10": {
+          "assigned_total": 6441,
+          "assigned_mean": 12.882,
+          "correct_total": 930,
+          "references_total": 4893,
+          "precision_micro": 0.14438751746623196,
+          "recall_micro": 0.1900674432863274,
+          "f1_micro": 0.1641079936474325
+        }
+      },
+      "0.9": {
+        "2": {
+          "assigned_total": 12773,
+          "assigned_mean": 25.546,
+          "correct_total": 2707,
+          "references_total": 4893,
+          "precision_micro": 0.21193141783449465,
+          "recall_micro": 0.5532393214796648,
+          "f1_micro": 0.3064643948828258
+        },
+        "3": {
+          "assigned_total": 13014,
+          "assigned_mean": 26.028,
+          "correct_total": 2604,
+          "references_total": 4893,
+          "precision_micro": 0.2000922083909636,
+          "recall_micro": 0.5321888412017167,
+          "f1_micro": 0.290835985927291
+        },
+        "5": {
+          "assigned_total": 13476,
+          "assigned_mean": 26.952,
+          "correct_total": 2508,
+          "references_total": 4893,
+          "precision_micro": 0.1861086375779163,
+          "recall_micro": 0.5125689760882894,
+          "f1_micro": 0.2730687571451903
+        },
+        "10": {
+          "assigned_total": 13604,
+          "assigned_mean": 27.208,
+          "correct_total": 2485,
+          "references_total": 4893,
+          "precision_micro": 0.18266686268744486,
+          "recall_micro": 0.5078683834048641,
+          "f1_micro": 0.2686922203600584
+        }
+      }
+    },
+    "spacy_en_core_web_sm_3_8_0": {
+      "0.3333333333333333": {
+        "2": {
+          "assigned_total": 5806,
+          "assigned_mean": 11.612,
+          "correct_total": 749,
+          "references_total": 4893,
+          "precision_micro": 0.12900447812607646,
+          "recall_micro": 0.1530758226037196,
+          "f1_micro": 0.14001308533507806
+        },
+        "3": {
+          "assigned_total": 6378,
+          "assigned_mean": 12.756,
+          "correct_total": 686,
+          "references_total": 4893,
+          "precision_micro": 0.10755722797115083,
+          "recall_micro": 0.1402002861230329,
+          "f1_micro": 0.12172832934078609
+        },
+        "5": {
+          "assigned_total": 6460,
+          "assigned_mean": 12.92,
+          "correct_total": 880,
+          "references_total": 4893,
+          "precision_micro": 0.13622291021671826,
+          "recall_micro": 0.17984876353975066,
+          "f1_micro": 0.15502510349687307
+        },
+        "10": {
+          "assigned_total": 6381,
+          "assigned_mean": 12.762,
+          "correct_total": 970,
+          "references_total": 4893,
+          "precision_micro": 0.15201379094185866,
+          "recall_micro": 0.1982423870835888,
+          "f1_micro": 0.1720773461060848
+        }
+      },
+      "0.9": {
+        "2": {
+          "assigned_total": 12627,
+          "assigned_mean": 25.254,
+          "correct_total": 2787,
+          "references_total": 4893,
+          "precision_micro": 0.2207175100974103,
+          "recall_micro": 0.5695892090741876,
+          "f1_micro": 0.31815068493150683
+        },
+        "3": {
+          "assigned_total": 12867,
+          "assigned_mean": 25.734,
+          "correct_total": 2691,
+          "references_total": 4893,
+          "precision_micro": 0.20913965959431102,
+          "recall_micro": 0.5499693439607602,
+          "f1_micro": 0.3030405405405405
+        },
+        "5": {
+          "assigned_total": 13309,
+          "assigned_mean": 26.618,
+          "correct_total": 2593,
+          "references_total": 4893,
+          "precision_micro": 0.19483056578255317,
+          "recall_micro": 0.5299407316574699,
+          "f1_micro": 0.28491374574222617
+        },
+        "10": {
+          "assigned_total": 13461,
+          "assigned_mean": 26.922,
+          "correct_total": 2546,
+          "references_total": 4893,
+          "precision_micro": 0.1891389941311938,
+          "recall_micro": 0.5203351726956877,
+          "f1_micro": 0.2774327122153209
+        }
+      }
+    }
+  },
+  "interpretation": "The model/fraction were chosen from validation results, not by retuning test scores. These test results are exploratory because this test set has been inspected in prior runs."
+}

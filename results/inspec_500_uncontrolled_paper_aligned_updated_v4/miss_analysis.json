@@ -1,0 +1,144 @@
+{
+  "analysis": "Per-reference candidate-generation and method-selection miss classification",
+  "data_file_sha256": "551f865d318be7d43cdb7271bc9c4adbb5748f7940877d81d5289010cf0f759e",
+  "source_file_sha256": "61cdc164c41e27da57264626071e46a01a5c26041b37a1e11b9af0fe4691fb6c",
+  "config_file_sha256": "c742c30b20f88ea98fb1573555ac92eba6e9e211f2be9c27160489bc0c784660",
+  "split": "Inspec test; diagnostic only, no tuning performed",
+  "document_count": 500,
+  "references_total": 4893,
+  "reference_origins": {
+    "extractive": 3272,
+    "abstractive": 1618,
+    "abstractive/extractive": 3
+  },
+  "candidate_generation": {
+    "generated_references": 3254,
+    "not_generated_references": 1639,
+    "coverage": 0.6650316779072144,
+    "not_generated_categories": {
+      "abstractive_reference": 1142,
+      "blocked_by_pos": 474,
+      "blocked_by_punctuation": 11,
+      "extractive_no_contiguous_token_match": 12
+    },
+    "unmatched_source_labels": 0
+  },
+  "methods": {
+    "tfidf": {
+      "candidate_references": 3254,
+      "selected_references": 1048,
+      "generated_but_not_selected": 2206,
+      "not_generated_references": 1639,
+      "assigned_total": 6665,
+      "unmatched_assignment_total": 5617,
+      "normalized_unique_predictions": 6515,
+      "normalized_unique_unmatched_predictions": 5467,
+      "normalization_collision_total": 150,
+      "metrics_assigned_total": 6665,
+      "metrics_correct_total": 1048,
+      "metrics_f1_micro": 0.1813462536771068,
+      "validation_matches_saved_assigned_total": true,
+      "validation_matches_saved_correct_total": true,
+      "reference_categories": {
+        "abstractive_reference": 1142,
+        "blocked_by_pos": 474,
+        "blocked_by_punctuation": 11,
+        "extractive_no_contiguous_token_match": 12
+      }
+    },
+    "textrank_w2": {
+      "candidate_references": 3254,
+      "selected_references": 741,
+      "generated_but_not_selected": 2513,
+      "not_generated_references": 1639,
+      "assigned_total": 5876,
+      "unmatched_assignment_total": 5135,
+      "normalized_unique_predictions": 5803,
+      "normalized_unique_unmatched_predictions": 5062,
+      "normalization_collision_total": 73,
+      "metrics_assigned_total": 5876,
+      "metrics_correct_total": 741,
+      "metrics_f1_micro": 0.13761723465502831,
+      "validation_matches_saved_assigned_total": true,
+      "validation_matches_saved_correct_total": true,
+      "reference_categories": {
+        "abstractive_reference": 1142,
+        "blocked_by_pos": 474,
+        "blocked_by_punctuation": 11,
+        "extractive_no_contiguous_token_match": 12
+      }
+    },
+    "textrank_w3": {
+      "candidate_references": 3254,
+      "selected_references": 671,
+      "generated_but_not_selected": 2583,
+      "not_generated_references": 1639,
+      "assigned_total": 6439,
+      "unmatched_assignment_total": 5768,
+      "normalized_unique_predictions": 6332,
+      "normalized_unique_unmatched_predictions": 5661,
+      "normalization_collision_total": 107,
+      "metrics_assigned_total": 6439,
+      "metrics_correct_total": 671,
+      "metrics_f1_micro": 0.1184256971408401,
+      "validation_matches_saved_assigned_total": true,
+      "validation_matches_saved_correct_total": true,
+      "reference_categories": {
+        "abstractive_reference": 1142,
+        "blocked_by_pos": 474,
+        "blocked_by_punctuation": 11,
+        "extractive_no_contiguous_token_match": 12
+      }
+    },
+    "textrank_w5": {
+      "candidate_references": 3254,
+      "selected_references": 861,
+      "generated_but_not_selected": 2393,
+      "not_generated_references": 1639,
+      "assigned_total": 6495,
+      "unmatched_assignment_total": 5634,
+      "normalized_unique_predictions": 6364,
+      "normalized_unique_unmatched_predictions": 5503,
+      "normalization_collision_total": 131,
+      "metrics_assigned_total": 6495,
+      "metrics_correct_total": 861,
+      "metrics_f1_micro": 0.1512118018967334,
+      "validation_matches_saved_assigned_total": true,
+      "validation_matches_saved_correct_total": true,
+      "reference_categories": {
+        "abstractive_reference": 1142,
+        "blocked_by_pos": 474,
+        "blocked_by_punctuation": 11,
+        "extractive_no_contiguous_token_match": 12
+      }
+    },
+    "textrank_w10": {
+      "candidate_references": 3254,
+      "selected_references": 930,
+      "generated_but_not_selected": 2324,
+      "not_generated_references": 1639,
+      "assigned_total": 6441,
+      "unmatched_assignment_total": 5511,
+      "normalized_unique_predictions": 6305,
+      "normalized_unique_unmatched_predictions": 5375,
+      "normalization_collision_total": 136,
+      "metrics_assigned_total": 6441,
+      "metrics_correct_total": 930,
+      "metrics_f1_micro": 0.1641079936474325,
+      "validation_matches_saved_assigned_total": true,
+      "validation_matches_saved_correct_total": true,
+      "reference_categories": {
+        "abstractive_reference": 1142,
+        "blocked_by_pos": 474,
+        "blocked_by_punctuation": 11,
+        "extractive_no_contiguous_token_match": 12
+      }
+    }
+  },
+  "interpretation": {
+    "generated_but_not_selected": "reference phrase is available in the POS-filtered contiguous candidate set but absent from the selected predictions",
+    "unmatched_assignment_total": "raw assigned phrase count minus unique normalized reference matches; this follows the current corpus-micro precision denominator",
+    "normalization_collision_total": "raw distinct output phrases that collapse to fewer unique Porter-normalized phrases",
+    "not_generated_categories": "abstractive labels use the MIDAS annotation; extractive labels are checked against token sequence, POS eligibility, and punctuation boundaries"
+  }
+}

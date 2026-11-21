@@ -1,0 +1,4 @@
+2026-11-07 14:49:30,702 INFO 开始运行 textrank_keyword_fixed_subset，样本数=150，试跑限制=None
+2026-11-07 14:50:04,770 INFO 开始运行 textrank_keyword_fixed_subset，样本数=150，试跑限制=None
+2026-11-07 14:50:06,948 INFO 预处理完成，耗时 2.177323 秒
+2026-11-07 14:50:07,794 INFO 运行完成，总耗时 3.022103 秒；输出目录=D:\Beijing Institute of Technology\Sem 8\自然语言处理项目实践\final project\results\inspec_150_seed2026

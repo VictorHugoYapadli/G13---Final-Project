@@ -1,0 +1,47 @@
+{
+  "experiment_name": "textrank_inspec_150_seed2026",
+  "paper": {
+    "title": "TextRank: Bringing Order into Texts",
+    "url": "https://aclanthology.org/W04-3252/",
+    "target": "Section 3, Table 1: unsupervised keyword extraction, evaluated on a fixed 150-document sample"
+  },
+  "dataset": {
+    "expected_min_documents": 150,
+    "expected_max_documents": 150
+  },
+  "preprocessing": {
+    "pos_tags": ["NN", "NNS", "NNP", "NNPS", "JJ", "JJR", "JJS"],
+    "stemming": "Porter",
+    "word_node_strategy": "unique_lowercase_tokens_passing_pos_filter",
+    "phrase_postprocessing": "merge_adjacent_selected_word_nodes",
+    "coverage_candidate_strategy": "all_contiguous_eligible_subphrases"
+  },
+  "textrank": {
+    "windows": [2, 3, 5, 10],
+    "top_word_fraction": 0.3333333333333333,
+    "damping": 0.85,
+    "tolerance": 0.0001,
+    "max_iterations": 100
+  },
+  "ablations": {
+    "no_pos_filter": {
+      "enabled": true,
+      "comparison_window": 2,
+      "description": "Remove only the noun/adjective POS filter while keeping the 150 documents and all other settings fixed."
+    },
+    "exclude_single_character_tokens": {
+      "enabled": true,
+      "comparison_window": 2,
+      "description": "Exclude one-character tokens while keeping the 150 documents and all other settings fixed."
+    }
+  },
+  "evaluation": {
+    "cutoffs": [5, 10],
+    "aggregation": "document_macro_and_corpus_micro",
+    "paper_all_predictions": true,
+    "case_count": 10,
+    "case_seed": 2026,
+    "include_text_in_cases": false,
+    "text_excerpt_characters": 500
+  }
+}

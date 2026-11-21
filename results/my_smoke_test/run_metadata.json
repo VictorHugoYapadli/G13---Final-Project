@@ -1,0 +1,115 @@
+{
+  "experiment_name": "textrank_inspec_500_uncontrolled_paper_aligned",
+  "code_version": "0.1.0",
+  "config_path": "D:\\BIT\\SEM 7\\NLP\\Project\\code\\configs\\experiment_paper_aligned.json",
+  "config_sha256": "c742c30b20f88ea98fb1573555ac92eba6e9e211f2be9c27160489bc0c784660",
+  "code_files_sha256": {
+    "__init__.py": "3411162f5dcd6e106d33585b32c4905c30fbb012e3eef036ca9f1300c6c52a0a",
+    "candidates.py": "00f581604a549579f257f8de26af89d439d9fe654cf1b1d2e04f45e22a3808e1",
+    "dataio.py": "ed093d68227e91fa905f47a598360e00667dda56ce41d32d4aa3e21baa7c66f5",
+    "experiment.py": "d733a75080e3a2e25878add1a3ccf8cc616f2fad509c791af5c35d6713afa24b",
+    "graph.py": "91b057144b714ca5efa320638f900de52722c31fe1be129a2d402039e5936d72",
+    "metrics.py": "e8b22b4ec9207e5f760a2fdf2a72e388fd715321a56f361745502a357e86597b",
+    "text.py": "c17cf1b3216dbb0ee39520dd07be289eda2427d2ee4675b33695d4ff5732317a",
+    "run_experiment.py": "5a1c779ee60b74f8818981cfe57eca075a7eaf4720f010ab6234f8788be50221"
+  },
+  "started_at_utc": "2026-11-13T12:33:06.069020+00:00",
+  "finished_at_utc": "2026-11-13T12:33:07.264019+00:00",
+  "duration_seconds": 1.1861460000072839,
+  "preprocessing_seconds": 0.85806529999536,
+  "document_count": 2,
+  "smoke_limit": 2,
+  "data_path": "D:\\BIT\\SEM 7\\NLP\\Project\\code\\data\\inspec_paper_test.jsonl",
+  "data_sha256": "551f865d318be7d43cdb7271bc9c4adbb5748f7940877d81d5289010cf0f759e",
+  "sample_ids_in_order": [
+    "1949",
+    "1945"
+  ],
+  "case_sample_ids": [
+    "1949",
+    "1945"
+  ],
+  "configuration": {
+    "experiment_name": "textrank_inspec_500_uncontrolled_paper_aligned",
+    "paper": {
+      "title": "TextRank: Bringing Order into Texts",
+      "url": "https://aclanthology.org/W04-3252/",
+      "target": "Section 3, Table 1: undirected TextRank, co-occurrence windows 2/3/5/10"
+    },
+    "dataset": {
+      "expected_min_documents": 500,
+      "expected_max_documents": 500
+    },
+    "preprocessing": {
+      "pos_tags": [
+        "NN",
+        "NNS",
+        "NNP",
+        "NNPS",
+        "JJ",
+        "JJR",
+        "JJS"
+      ],
+      "stemming": "Porter",
+      "word_node_strategy": "unique_lowercase_tokens_passing_pos_filter",
+      "phrase_postprocessing": "merge_adjacent_selected_word_nodes",
+      "coverage_candidate_strategy": "all_contiguous_eligible_subphrases"
+    },
+    "textrank": {
+      "windows": [
+        2,
+        3,
+        5,
+        10
+      ],
+      "top_word_fraction": 0.3333333333333333,
+      "damping": 0.85,
+      "tolerance": 0.0001,
+      "max_iterations": 100
+    },
+    "ablations": {
+      "no_pos_filter": {
+        "enabled": true,
+        "comparison_window": 2,
+        "description": "Remove only the noun/adjective POS filter; keep data, graph window, damping, convergence threshold, and top-node fraction fixed."
+      },
+      "exclude_single_character_tokens": {
+        "enabled": true,
+        "comparison_window": 2,
+        "description": "Keep the noun/adjective POS filter but exclude one-character tokens; keep all other settings fixed."
+      }
+    },
+    "evaluation": {
+      "cutoffs": [
+        5,
+        10
+      ],
+      "aggregation": "document_macro_and_corpus_micro",
+      "paper_all_predictions": true,
+      "case_count": 10,
+      "case_seed": 2026,
+      "include_text_in_cases": false,
+      "text_excerpt_characters": 500
+    }
+  },
+  "python_version": "3.14.0",
+  "nltk_version": "3.9.1",
+  "pos_tagger_resource": {
+    "resource": "averaged_perceptron_tagger_eng",
+    "files_sha256": {
+      "averaged_perceptron_tagger_eng.classes.json": "d152ffa69d45b8357276341a3d592c6c025911d52ec0d9068d4f382560dd48b6",
+      "averaged_perceptron_tagger_eng.tagdict.json": "4c713731cb06727736962bc8cd94ad919217a040e76691059af99bc0c2c9c246",
+      "averaged_perceptron_tagger_eng.weights.json": "789e8e35f6fac656d9b7eccea29ba4e8a137cbb5b525dd31f39e4291a9e80832"
+    }
+  },
+  "method_ranking_seconds": {
+    "tfidf": 0.0004427000239957124,
+    "textrank_w2": 0.008819300011964515,
+    "textrank_w3": 0.010453499999130145,
+    "textrank_w5": 0.008175500013749115,
+    "textrank_w10": 0.008741400015424006,
+    "textrank_w2_no_pos_filter": 0.01352490000135731,
+    "textrank_w2_no_single_char": 0.009935899986885488
+  },
+  "notes": "无随机算法；evaluation.case_seed 仅固定案例样本 ID，不控制数据子集。"
+}

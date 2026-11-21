@@ -1,0 +1,34 @@
+2026-11-21 21:06:25,621 INFO Starting TextRank experiment.
+2026-11-21 21:06:25,622 INFO Loading configuration: C:\Users\ASUS\Downloads\code_owain\code_owain\configs\experiment.json
+2026-11-21 21:06:25,624 INFO Loading dataset: C:\Users\ASUS\Downloads\code_owain\code_owain\data\fixed_subset.jsonl
+2026-11-21 21:06:25,630 INFO Loaded 150 documents.
+2026-11-21 21:06:25,631 INFO Validated 150 documents; smoke-test limit: none.
+2026-11-21 21:06:25,631 INFO Evidence will be written to: C:\Users\ASUS\Downloads\code_owain\code_owain\results\textrank_20261121_210625
+2026-11-21 21:06:25,632 INFO Preprocessing documents with the nltk POS tagger (NLTK English tagger).
+2026-11-21 21:06:30,465 INFO Preprocessing progress: 15/150 documents (10%).
+2026-11-21 21:06:30,648 INFO Preprocessing progress: 30/150 documents (20%).
+2026-11-21 21:06:30,796 INFO Preprocessing progress: 45/150 documents (30%).
+2026-11-21 21:06:31,014 INFO Preprocessing progress: 60/150 documents (40%).
+2026-11-21 21:06:31,136 INFO Preprocessing progress: 75/150 documents (50%).
+2026-11-21 21:06:31,244 INFO Preprocessing progress: 90/150 documents (60%).
+2026-11-21 21:06:31,448 INFO Preprocessing progress: 105/150 documents (70%).
+2026-11-21 21:06:31,615 INFO Preprocessing progress: 120/150 documents (80%).
+2026-11-21 21:06:31,870 INFO Preprocessing progress: 135/150 documents (90%).
+2026-11-21 21:06:32,065 INFO Preprocessing progress: 150/150 documents (100%).
+2026-11-21 21:06:32,065 INFO Preprocessing complete in 6.43 seconds.
+2026-11-21 21:06:32,070 INFO Ranking keywords for 150 documents using 4 methods: tfidf, textrank_w2, textrank_w4, textrank_w8.
+2026-11-21 21:06:37,252 INFO Ranking progress: 15/150 documents (10%).
+2026-11-21 21:06:41,806 INFO Ranking progress: 30/150 documents (20%).
+2026-11-21 21:06:46,735 INFO Ranking progress: 45/150 documents (30%).
+2026-11-21 21:06:50,938 INFO Ranking progress: 60/150 documents (40%).
+2026-11-21 21:06:54,157 INFO Ranking progress: 75/150 documents (50%).
+2026-11-21 21:06:56,714 INFO Ranking progress: 90/150 documents (60%).
+2026-11-21 21:07:02,665 INFO Ranking progress: 105/150 documents (70%).
+2026-11-21 21:07:07,136 INFO Ranking progress: 120/150 documents (80%).
+2026-11-21 21:07:11,947 INFO Ranking progress: 135/150 documents (90%).
+2026-11-21 21:07:16,374 INFO Ranking progress: 150/150 documents (100%).
+2026-11-21 21:07:16,374 INFO Calculating evaluation metrics for 4 methods.
+2026-11-21 21:07:16,553 INFO Writing predictions.jsonl and metrics.csv.
+2026-11-21 21:07:16,571 INFO Writing 10 sampled cases to cases_10.jsonl.
+2026-11-21 21:07:16,582 INFO Writing run_metadata.json and finalizing evidence files.
+2026-11-21 21:07:16,584 INFO Experiment finished in 50.95 seconds. Evidence directory: C:\Users\ASUS\Downloads\code_owain\code_owain\results\textrank_20261121_210625

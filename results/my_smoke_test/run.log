@@ -1,0 +1,3 @@
+2026-11-13 20:33:06,069 INFO 开始运行 textrank_inspec_500_uncontrolled_paper_aligned，样本数=2，试跑限制=2
+2026-11-13 20:33:06,927 INFO 预处理完成，耗时 0.858065 秒
+2026-11-13 20:33:07,278 INFO 运行完成，总耗时 1.186146 秒；输出目录=D:\BIT\SEM 7\NLP\Project\code\results\my_smoke_test
